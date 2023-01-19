@@ -3,8 +3,8 @@ let txtResultado = document.getElementById("txtResultado");
 let btnCopiar = document.getElementById("btnCopiar");
 let btnEncriptar = document.getElementById("btnEncriptar");
 let btnDesencriptar = document.getElementById("btnDesencriptar");
-txtTexto.setAttribute("Placeholder","Ingrese el texto Aqui")
-txtResultado.setAttribute("Placeholder","Ningun Mensaje Encontrado")
+txtTexto.setAttribute("Placeholder", "Ingrese el texto Aqui");
+txtResultado.setAttribute("Placeholder", "Ningun Mensaje Encontrado");
 /**
  *Limpia texto ingresado por el usuario
  * @param {[String]} textoACifrar Texto que ingresa el usuario
@@ -73,7 +73,7 @@ function ClickCifrar() {
   let textoAEncriptar = txtTexto.value.toString();
   if (textoAEncriptar.length != 0) {
     txtResultado.value = Cifrar(RemueveCaracteresEspeciales(textoAEncriptar));
-    txtResultado.dispatchEvent(new Event('change'));
+    txtResultado.dispatchEvent(new Event("change"));
   } else {
     alert("No hay texto a Cifrar");
   }
@@ -82,19 +82,19 @@ function ClicDescifrar() {
   let TextoDescifrar = txtTexto.value.toString();
   if (TextoDescifrar.length != 0) {
     txtResultado.value = Descifrar(TextoDescifrar);
-    txtResultado.dispatchEvent(new Event('change'));
+    txtResultado.dispatchEvent(new Event("change"));
   } else {
     alert("No hay texto para descifrar");
   }
 }
 function CopiarAlPortapapeles() {
- // console.log("click")
+  // console.log("click")
   let valorcopiar = txtResultado.value;
- // console.log(valorcopiar)
+  // console.log(valorcopiar)
   if (valorcopiar.length != 0) {
     navigator.clipboard.writeText(valorcopiar).then(
       function () {
-      // alert("Valor Copiado correctamente");
+        // alert("Valor Copiado correctamente");
       },
       function (error) {
         alert("No se pudo copiar el valor", error);
@@ -105,18 +105,15 @@ function CopiarAlPortapapeles() {
   }
 }
 
-function SiHayTextoResultado(){
- if(txtResultado.value!="" && txtResultado.value!=null)
- {
-  document.getElementById("divimagen").classList.add("muneco_ocultar")
- }
- else
- {
-  document.getElementById("divimagen").classList.remove("muneco_ocultar")
- }
+function SiHayTextoResultado() {
+  if (txtResultado.value != "" && txtResultado.value != null) {
+    document.getElementById("divimagen").classList.add("muneco_ocultar");
+  } else {
+    document.getElementById("divimagen").classList.remove("muneco_ocultar");
+  }
 }
 
 btnEncriptar.setAttribute("OnClick", "ClickCifrar()");
 btnDesencriptar.setAttribute("OnClick", "ClicDescifrar()");
 btnCopiar.setAttribute("OnClick", "CopiarAlPortapapeles()");
-txtResultado.setAttribute("OnChange","SiHayTextoResultado()")
+txtResultado.setAttribute("OnChange", "SiHayTextoResultado()");
