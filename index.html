@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Encriptador-Desencriptador</title>
+  </head>
+  <body>
+    <header>
+      <h1><img class="logo" src="Recursos/Logo.svg" alt="Logotipo Alura" "></h1>
+    </header>
+    <main class="container">
+      <div class="texto">
+        <textarea class="texto_textarea" id="txtTexto"></textarea>
+        <div class="condiciones">
+          <p class="condiciones__p">
+            <img
+              class="icono_exclamacion"
+              src="Recursos/circle-exclamation-solid.svg"
+            />
+            Solo letras minusculas y sin Caracteres especiales
+          </p>
+        </div>
+        <div class="botones">
+          <button class="boton" type="button" id="btnEncriptar">
+            Encriptar
+          </button>
+          <button class="boton" type="button" id="btnDesencriptar">
+            Desencriptar
+          </button>
+        </div>
+      </div>
+      <div class="resultado">
+        <div id="divimagen" class="imagen">
+          <img
+            class="muneco"
+            src="Recursos/Muñeco.svg"
+            alt="Muñeco sin resultado"
+          />
+        </div>
+        <textarea class="resultado_area" id="txtResultado"></textarea>
+        <div class="copiar">
+          <button class="btncopiar" type="button" id="btnCopiar">Copiar</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="piepagina">
+       <div>
+        <a href="https://www.linkedin.com/in/scott-martinez-olivas" target="_blank"><img  class="redes"src="Recursos/icons8-linkedin-circled-48.png" alt="Logotipo de Linkedin"></a>
+        <a href="https://github.com/scottmartinez" target="_blank"> <img  class="redes"src="Recursos/icons8-github-64.png" alt="Logotipo de Github"></a>
+        <p>Elaborado por Scott Martinez- Alura Latam</p>
+       </div>
+      </div>
+
+    </footer>
+  </body>
+  <script src="scripts.js"></script>
+</html>
